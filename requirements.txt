@@ -1,0 +1,12 @@
+# Third-party Python dependencies used by the supplied scripts
+numpy
+scipy
+matplotlib
+pandas
+openpyxl
+
+# Note:
+# entanglement_swapping.py also requires SeQUeNCe (the quantum network simulator).
+# Install/configure SeQUeNCe from its official source/repository for your environment.
+# run_regime_average.py imports run_5node_cases.py, which is not included in the three
+# supplied files, and expects an Excel workbook containing the test-case sheets.
