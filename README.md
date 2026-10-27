@@ -138,7 +138,7 @@ project/
 ├── ProposedEntanglementSwappingAlgorithms.py
 ├── entanglement_swapping.py
 ├── run_regime_average.py
-├── run_5node_cases.py       # required by run_regime_average.py; not supplied here
+├── run_5node_cases.py       # required by run_regime_average.py;
 ├── testcases.xlsx           # example workbook; use your actual workbook
 └── requirements.txt
 ```
