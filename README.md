@@ -91,6 +91,48 @@ python run_regime_average.py --workbook path/to/testcases.xlsx --all-cases --dry
 
 Use `python run_regime_average.py --help` to see all options.
 
+### `regimeplot.py`
+
+Generates a four-panel bar chart comparing the average expected-entanglement difference
+from DP for `Our Algo` and `Baseline (CBT, Equal Alloc)` across four regimes and
+multiple qubit counts.
+
+The script:
+- Reads Excel workbooks from `./testcases/`.
+- Uses the `Wide Random`, `High Fidelity`, `Mid-Noise`, and
+  `Random Bottleneck 30%` worksheets.
+- Expects workbook filenames to contain the qubit count, such as
+  `25qubits.xlsx`, `50qubits.xlsx`, `75qubits.xlsx`, `100qubits.xlsx`,
+  and `125qubits.xlsx`.
+- Computes each algorithm's difference from DP for every test case, then averages
+  those differences for each regime and qubit count.
+- Creates a 2-by-2 bar chart and saves it as
+  `all_qubits_diff_with_regimes.png` by default.
+
+Run:
+
+```bash
+python regimeplot.py
+```
+
+Expected input layout:
+
+```text
+project/
+├── regimeplot.py
+└── testcases/
+    ├── 25qubits.xlsx
+    ├── 50qubits.xlsx
+    ├── 75qubits.xlsx
+    ├── 100qubits.xlsx
+    └── 125qubits.xlsx
+```
+
+Edit `INPUT_FOLDER`, `OUTPUT_FILE`, `QUBIT_COUNTS`, `SHEETS`, and `REGIME_LABELS`
+near the top of the script to customize its inputs and plot configuration.
+
+
+
 ## Requirements
 
 - Python 3.10 or newer is recommended.
